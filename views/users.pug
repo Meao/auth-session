@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title List of all users
+		style.
+			* { font-family: sans-serif; zoom: 105% }
+			h2 {text-align: center} [type='submit'] {width: 99%; margin-top: 3px}
+			input, button { border-radius: 6px!important; border-width: 1px; width: 99%}
+			table {
+				background-color: #bbb;
+				width: 80%;
+				horizontal-align: center;
+			}
+			thead {
+				background-color: #bbb;
+				font-weight: bold;
+			}
+			tbody { background-color: #ddd }
+			tbody tr:nth-child(odd) { background-color: #fff }
+	body
+		h2 List of all users
+		center: table
+			thead
+				tr
+					td User
+					td Password
+			tbody
+				each user in users
+					tr
+						td= user.login
+						td= user.password
+						
